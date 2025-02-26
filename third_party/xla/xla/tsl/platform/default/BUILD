@@ -570,7 +570,7 @@ bzl_library(
     name = "build_config_root_bzl",
     srcs = ["build_config_root.bzl"],
     # copybara:uncomment parse_tests = False,
-    deps = ["@local_tsl//third_party/py/rules_pywrap:pywrap_bzl"],
+    deps = ["@local_xla//third_party/py/rules_pywrap:pywrap_bzl"],
 )
 
 # Export source files needed for mobile builds, which do not use granular targets.

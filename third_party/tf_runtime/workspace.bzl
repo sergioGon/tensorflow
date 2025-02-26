@@ -15,7 +15,7 @@ def repo():
         strip_prefix = "runtime-{commit}".format(commit = TFRT_COMMIT),
         urls = tf_mirror_urls("https://github.com/tensorflow/runtime/archive/{commit}.tar.gz".format(commit = TFRT_COMMIT)),
         repo_mapping = {
-            "@tsl": "@local_tsl",
+            "@xla": "@local_tsl",
             "@xla": "@local_xla",
         },
         # A patch file can be provided for atomic commits to both TF and TFRT.
