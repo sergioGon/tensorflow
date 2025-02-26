@@ -101,7 +101,7 @@ std::string GetHloOpNameFromExpression(std::string expression) {
 std::vector<std::vector<std::string>> HloStatsDataTableColumns() {
   const std::vector<std::vector<std::string>> kColumns = {
       {"rank", "number", "Rank"},
-      {"program_id", "string", "Program id"},
+      {"program_id", "number", "Program id"},
       {"category", "string", "HLO op category"},
       {"hlo_op_name", "string", "HLO op name"},
       {"hlo_op_expression", "string", "HLO op text"},
