@@ -15,15 +15,15 @@
 #include "tensorflow/lite/experimental/litert/runtime/event.h"
 
 #include <fcntl.h>
+#if LITERT_HAS_SYNC_FENCE_SUPPORT
 #include <poll.h>
+#endif  // LITERT_HAS_SYNC_FENCE_SUPPORT
 #include <unistd.h>
 
 #include <cerrno>
 #include <cstdint>
-#include <cstring>
 
 #include "tensorflow/lite/experimental/litert/c/litert_common.h"
-#include "tensorflow/lite/experimental/litert/c/litert_logging.h"
 #include "tensorflow/lite/experimental/litert/cc/litert_expected.h"
 
 using litert::Error;
