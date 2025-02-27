@@ -72,6 +72,7 @@ cc_library(
     name = "nanort_executable",
     srcs = ["nanort_executable.cc"],
     hdrs = ["nanort_executable.h"],
+    compatible_with = ["//buildenv/target:non_prod"],
     visibility = internal_visibility([
         "//xla/backends/cpu/nanort:nanort_users",
     ]),
@@ -101,7 +102,6 @@ cc_library(
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/types:span",
-        "@llvm-project//llvm:Support",
         "@local_tsl//tsl/platform:casts",
         "@local_tsl//tsl/platform:platform_port",
         "@local_tsl//tsl/profiler/lib:traceme",
