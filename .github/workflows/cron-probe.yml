@@ -1,13 +1,13 @@
 name: cron probe (temporal, diagnostico)
 
-# Diagnostico temporal 2026-07-31: tercera dimension del experimento.
-# Este es un repo ANTIGUO (2025-02) — los otros dos repos probados se crearon
-# en julio de 2026. Si este cron dispara y los otros no, el problema esta
-# ligado a la fecha de creacion del repo. Se borra al acabar.
+# Reconfigurada 2026-07-31 tras red-team: horaria a minuto valle (:37), no */5.
+# Repo ANTIGUO (2025-02) — tercera dimension del experimento frente a los dos
+# repos de julio 2026. CONGELADA hasta 2026-08-03: cada edicion re-registra el
+# workflow (#185373). NO editar, NO borrar hasta veredicto.
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "37 * * * *"
   workflow_dispatch:
 
 jobs:
